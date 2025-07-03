@@ -39,7 +39,7 @@
     Download the latest PowerShell 7 from <a href="https://github.com/PowerShell/PowerShell">PowerShell GitHub</a>. Unzip the download, copy <code>PowerShellCoreExecutionPolicy.admx</code> to <code>C:/Windows/PolicyDefinitions</code> and <code>PowerShellCoreExecutionPolicy.adml</code> to <code>C:/Windows/PolicyDefinitions/en-US</code> and all the other language folders on the same directory level.
   </li>
   <li>
-    In PolicyPlus, go to <strong>PowerShell Core &gt; Windows PowerShell</strong>, disable <strong>Turn on Script Execution</strong>, and save.
+    In PolicyPlus, go to <strong>PowerShell Core</strong> and disable <strong>Turn on Script Execution</strong>, and save.
   </li>
 </ol>
 
