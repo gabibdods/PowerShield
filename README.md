@@ -33,11 +33,13 @@
     It should return <code>ConstrainedLanguage</code> instead of <code>FullLanguage</code>.
   </li>
   <li>
-    Download <a href="https://github.com/Fleex255/PolicyPlus">PolicyPlus</a>. Launch it, navigate to <strong>Computer &gt; Windows Components &gt; Windows PowerShell</strong>, set <strong>Turn on Script Execution</strong> to <strong>Disabled</strong>, then save policies in the <strong>File</strong> tab. If you exit without saving the policies, change won't be applied!
+    Download <a href="https://github.com/Fleex255/PolicyPlus">PolicyPlus</a>. Launch it, navigate to <strong>Windows Components &gt; Windows PowerShell</strong>, set <strong>Turn on Script Execution</strong> to <strong>Disabled</strong>, then save policies in the <strong>File</strong> tab. If you exit without saving the policies, change won't be applied!
   </li>
   <li>
     Download the latest PowerShell 7 from <a href="https://github.com/PowerShell/PowerShell">PowerShell GitHub</a>. Unzip the download, copy <code>PowerShellCoreExecutionPolicy.admx</code> to <code>C:/Windows/PolicyDefinitions</code> and <code>PowerShellCoreExecutionPolicy.adml</code> to <code>C:/Windows/PolicyDefinitions/en-US</code> and all the other language folders on the same directory level.
-    In PolicyPlus, go to <strong>Administrative Templates &gt; PowerShell Core &gt; Windows PowerShell</strong>, disable <strong>Turn on Script Execution</strong>, and save.
+  </li>
+  <li>
+    In PolicyPlus, go to <strong>PowerShell Core &gt; Windows PowerShell</strong>, disable <strong>Turn on Script Execution</strong>, and save.
   </li>
 </ol>
 
