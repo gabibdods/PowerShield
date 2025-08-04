@@ -124,20 +124,26 @@ Get-Item $CertificatePath | Import-Certificate -CertStoreLocation "Cert:\LocalMa
 
 7. Display Thumbprint:
 ```plaintext
-Write-host "Certificate Thumbprint:" $Certificate.Thumbprint
+Write-host "Certificate Thumbprint: " $Certificate.Thumbprint
 ```
 
 8. Save the Certificate to Environment:
 ```plaintext
-$env:Certificate = $Certificate
+[System.Environment]::SetEnvironmentVariable("CertificateThumbprint", $Certificate.Thumbprint, "User")
 ```
 
 ### Signing a Local PowerShell Script
 
-1. Sign the script:
+1. Get the Certificate:
 ```plaintext
-Set-AuthenticodeSignature -FilePath "<script_path>" -Certificate $env:Certificate
+$Cert = Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Thumbprint -eq $env:CertificateThumbprint}
 ```
+
+2. Sign the script:
+```plaintext
+Set-AuthenticodeSignature -FilePath "<script_path>" -Certificate $Cert
+```
+The output should indicate Valid signature.
 
 ---
 
